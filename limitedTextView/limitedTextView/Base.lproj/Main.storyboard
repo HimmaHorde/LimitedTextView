@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KTv-1p-sCE" customClass="LimitedTextView">
+                                <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.69411764710000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="h5C-DQ-ptA"/>
+                                    <constraint firstAttribute="width" constant="300" id="tdH-QR-We7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumTextLength">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qb4-uR-mBv" customClass="LimitedTextField">
+                                <rect key="frame" x="37.5" y="188.5" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.043137254899999998" green="0.41176470590000003" blue="0.58039215690000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumTextLength">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KTv-1p-sCE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4gj-ka-JpF"/>
+                            <constraint firstItem="KTv-1p-sCE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCk-fi-YHm"/>
+                            <constraint firstItem="KTv-1p-sCE" firstAttribute="top" secondItem="qb4-uR-mBv" secondAttribute="bottom" constant="15" id="cMx-KU-AQq"/>
+                            <constraint firstItem="qb4-uR-mBv" firstAttribute="leading" secondItem="KTv-1p-sCE" secondAttribute="leading" id="fym-Ph-YHR"/>
+                            <constraint firstItem="qb4-uR-mBv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ghX-tc-vsu"/>
+                            <constraint firstItem="qb4-uR-mBv" firstAttribute="trailing" secondItem="KTv-1p-sCE" secondAttribute="trailing" id="smH-gf-sGv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LTextField" destination="qb4-uR-mBv" id="hbG-hy-UgH"/>
+                        <outlet property="LTextView" destination="KTv-1p-sCE" id="F3U-Sa-vYU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
