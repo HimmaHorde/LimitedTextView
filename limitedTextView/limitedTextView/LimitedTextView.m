@@ -32,7 +32,7 @@
 
 - (void)dealloc
 {
-    [self removeObserver:self forKeyPath:@"text"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - init
